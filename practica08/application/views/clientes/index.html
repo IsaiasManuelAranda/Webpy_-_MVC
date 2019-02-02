@@ -1,0 +1,29 @@
+$def with(datos)
+<a href="/"><button type="button" class="btn btn-primary btn-lg btn-block">Home</button></a>
+<center><h1>Base de datos</h1></center>
+
+<div class="container">
+    <h3><a href="/insert">Insertar cliente &nbsp; &nbsp; <img src="static/images/add.png"></a></h3>
+</div>
+<br>
+<table class="table" border="black">
+    <thead class="thead-dark">
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido Paterno</th>
+        <th scope="col">Apellido Materno</th>
+        <th scope="col">Tel&eacute;fono</th>
+        <th scope="col">Email</th>
+        <th scope="col">Eliminar</th>
+        <th scope="col">Actualizar</th>
+    </thead>
+    $for row in datos:
+        <tr>
+            <td><a href="/view/$row.nombre">$row.nombre</a></td>
+            <td><a href="/view/$row.nombre">$row.ape_pat_cli</a></td>
+            <td><a href="/view/$row.nombre">$row.ape_mat_cli</a></td>
+            <td><a href="/view/$row.nombre">$row.telefono_cli</a></td>
+            <td><a href="/view/$row.nombre">$row.email</a></td>
+            <td><a href="/delete/$row.nombre"><center><img src="static/images/delete.png"></a></center></td>
+            <td><a href="/update/$row.nombre"><center><img src="static/images/update.png"></a></center></td>
+        </tr>
+</table>

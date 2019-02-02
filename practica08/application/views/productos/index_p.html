@@ -1,0 +1,28 @@
+$def with(datos_p)
+<a href="/"><button type="button" class="btn btn-primary btn-lg btn-block">Home</button></a>
+<center><h1>Base de datos</h1></center>
+<div class="container">
+    <h3><a href="/insert_p">Insertar producto &nbsp; &nbsp; <img src="static/images/add.png"></a></h3>
+</div>
+<br>
+<table class="table" border="black">
+    <thead class="thead-dark">
+        <th scope="col">C&oacute;digo</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Existencia</th>
+        <th scope="col">Fecha de caducidad</th>
+        <th scope="col">No. Lote</th>
+        <th scope="col">Eliminar</th>
+        <th scope="col">Actualizar</th>
+    </thead>
+    $for row in datos_p:
+        <tr>
+            <td><a href="/view_p/$row.codigo">$row.codigo</a></td>
+            <td><a href="/view_p/$row.codigo">$row.nombre_produ</a></td>
+            <td><a href="/view_p/$row.codigo">$row.existencia</a></td>
+            <td><a href="/view_p/$row.codigo">$row.fecha_caducidad</a></td>
+            <td><a href="/view_p/$row.codigo">$row.no_lote</a></td>
+            <td><a href="/delete_p/$row.codigo"><center><img src="static/images/delete.png"></a></center></td>
+            <td><a href="/update_p/$row.codigo"><center><img src="static/images/update.png"></a></center></td>
+        </tr>
+</table>

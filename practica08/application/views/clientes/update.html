@@ -1,0 +1,21 @@
+$def with(datos)
+<h1><a href="/clientes">Actualizar</a></h1>
+
+<form method="POST">
+    <label for="nombre">Nombre: </label>
+    <input type="text" value="$datos.nombre" id="nombre" name="nombre">
+    <br>
+    <label for="ape_pat_cli">Apellido Paterno: </label>
+    <input type="text" value="$datos.ape_pat_cli" id="ape_pat_cli" name="ape_pat_cli">
+    <br>
+    <label for="ape_pat_cli">Apellido Materno: </label>
+    <input type="text" value="$datos.ape_mat_cli" id="ape_mat_cli" name="ape_mat_cli">
+    <br>
+    <label for="ape_pat_cli">Telefono: </label>
+    <input type="text" value="$datos.telefono_cli" id="telefono_cli" name="telefono_cli">
+    <br>
+    <label for="email">E-mail: </label>
+    <input type="email" value="$datos.email" id="email" name="email">
+    <br>
+    <button type="submit" class="btn btn-primary">Actualizar</button>
+</form>
